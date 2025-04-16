@@ -43,5 +43,6 @@ const withLayoutBasic = (Component: any) => {
     );
   };
 };
+// LayoutBasic
 
 export default withLayoutBasic;
