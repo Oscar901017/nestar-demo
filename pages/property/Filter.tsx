@@ -15,6 +15,7 @@ import {
 // import { propertySquare } from "../../config";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import { propertySquare } from "@/libs/config";
+import property from ".";
 
 const Filter = () => {
   const [searchText, setSearchText] = useState<string>("");
@@ -49,7 +50,8 @@ const Filter = () => {
           Location
         </p>
         <Stack
-          className={property - location}
+        //   className={property-location}
+        className={property-location}
           style={{ height: showMore ? "253px" : "115px" }}
         >
           {["SEOUL", "BUSAN", "DAEGU"].map((location: string) => {
