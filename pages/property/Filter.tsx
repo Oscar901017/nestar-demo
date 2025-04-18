@@ -51,7 +51,7 @@ const Filter = () => {
         </p>
         <Stack
         //   className={property-location}
-        className={property-location}
+        className="property-location"
           style={{ height: showMore ? "253px" : "115px" }}
         >
           {["SEOUL", "BUSAN", "DAEGU"].map((location: string) => {

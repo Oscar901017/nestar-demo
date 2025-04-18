@@ -9,17 +9,25 @@ import { NextPage } from "next";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
 
 const Home: NextPage = () => {
-  return (
-    <Stack className={"home-page"}>
-      <TrendProperties />
-      <PopularProperties />
-      <Advertisement />
-      <TopProperties />
-      <TopAgents />
-    </Stack>
-  );
+  //DEVICE: MOBILE vs PC
+  const device = useDeviceDetect();
+
+  if (device === "mobile") {
+    return <Stack>HOME PAGE MOBILE</Stack>;
+  } else {
+    return (
+      <Stack className={"home-page"}>
+        <TrendProperties />
+        <PopularProperties />
+        <Advertisement />
+        <TopProperties />
+        <TopAgents />
+      </Stack>
+    );
+  }
 };
 
 export default withLayoutMain(Home);
